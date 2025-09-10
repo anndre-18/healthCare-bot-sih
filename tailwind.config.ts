@@ -19,13 +19,39 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        /* Healthcare theme colors */
+        medical: {
+          DEFAULT: "hsl(var(--medical-primary))",
+          light: "hsl(var(--medical-light))",
+          accent: "hsl(var(--medical-accent))",
+        },
+        trust: {
+          DEFAULT: "hsl(var(--trust-blue))",
+          light: "hsl(var(--trust-light))",
+        },
+        
+        /* Status colors */
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        danger: "hsl(var(--danger))",
+        
+        /* Chat-specific */
+        chat: {
+          user: "hsl(var(--chat-user))",
+          bot: "hsl(var(--chat-bot))",
+          bg: "hsl(var(--chat-bg))",
+        },
+        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          light: "hsl(var(--secondary-light))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -80,10 +106,35 @@ export default {
             height: "0",
           },
         },
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        pulseGentle: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.8" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 0.5s ease-in",
+        "slide-up": "slideUp 0.3s ease-out",
+        "pulse-gentle": "pulseGentle 2s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-medical": "var(--gradient-medical)",
+        "gradient-trust": "var(--gradient-trust)",
+        "gradient-hero": "var(--gradient-hero)",
+      },
+      boxShadow: {
+        "soft": "var(--shadow-soft)",
+        "card": "var(--shadow-card)", 
+        "elevated": "var(--shadow-elevated)",
       },
     },
   },

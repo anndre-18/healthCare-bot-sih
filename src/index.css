@@ -2,41 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Healthcare Chatbot Design System - Medical greens, trustworthy blues, inclusive design */
 
 @layer base {
   :root {
+    /* Core healthcare palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 200 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Medical green theme */
+    --medical-primary: 151 83% 35%;  /* Deep medical green */
+    --medical-light: 151 60% 92%;    /* Light medical green background */
+    --medical-accent: 151 70% 45%;   /* Accent medical green */
+    
+    /* Trustworthy blue theme */
+    --trust-blue: 213 94% 50%;       /* Professional blue */
+    --trust-light: 213 100% 95%;     /* Light blue background */
+    
+    /* Warm, inclusive neutrals */
+    --warm-bg: 45 25% 98%;           /* Warm white background */
+    --warm-card: 45 20% 99%;         /* Warm card background */
+    --soft-border: 213 20% 88%;      /* Soft border color */
+    
+    /* Status colors */
+    --success: 151 83% 35%;          /* Success green */
+    --warning: 45 93% 58%;           /* Warning amber */
+    --danger: 0 84% 60%;             /* Danger red */
+    
+    /* Semantic design tokens */
+    --primary: var(--medical-primary);
+    --primary-foreground: 0 0% 100%;
+    --primary-light: var(--medical-light);
+    
+    --secondary: var(--trust-blue);
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: var(--trust-light);
+    
+    --card: var(--warm-card);
+    --card-foreground: var(--foreground);
+    
+    --background: var(--warm-bg);
+    
+    --muted: 213 20% 95%;
+    --muted-foreground: 213 15% 50%;
+    
+    --accent: var(--medical-accent);
+    --accent-foreground: 0 0% 100%;
+    
+    --border: var(--soft-border);
+    --input: var(--soft-border);
+    --ring: var(--medical-primary);
+    
+    --destructive: var(--danger);
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Healthcare-specific gradients */
+    --gradient-medical: linear-gradient(135deg, hsl(var(--medical-primary)), hsl(var(--medical-accent)));
+    --gradient-trust: linear-gradient(135deg, hsl(var(--trust-blue)), hsl(213 80% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--medical-light)), hsl(var(--trust-light)));
+    
+    /* Chat-specific colors */
+    --chat-user: var(--trust-blue);
+    --chat-bot: var(--medical-primary);
+    --chat-bg: var(--warm-bg);
+    
+    /* Shadows and effects */
+    --shadow-soft: 0 2px 8px -2px hsl(var(--medical-primary) / 0.1);
+    --shadow-card: 0 4px 12px -4px hsl(var(--medical-primary) / 0.15);
+    --shadow-elevated: 0 8px 24px -8px hsl(var(--medical-primary) / 0.2);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
